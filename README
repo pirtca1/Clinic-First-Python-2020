@@ -1,1 +1,6 @@
 Commit functioning code that has been finialized to master only
+Use Camelcase when naming exp: BreckSchool, AdvancedScienceResearch
+Push to orgin updates the repository with changes, so when you finish coding you will push your code. Click on the three dots on the source control panel
+Pull updates your version of the repository, do this at the start and during each session
+Commiting submits your code to the current branch you are on. Please leave a comment describing the code ex: New attempt at algorithim
+Branches act like folders, and each have a specific topic
