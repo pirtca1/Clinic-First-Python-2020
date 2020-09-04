@@ -32,19 +32,20 @@ def quarterGet(lst, n):
 class Quarter:
 
     def quarterCreate():
+        global qAll
         q1 = [fourSplit[0]]
         q2 = [fourSplit[1]]
         q3 = [fourSplit[2]]
         q4 = [fourSplit[3]]
-        return q1, q2,q3, q4
-    def quarterMaxMin(q1, q2, q3, q4):
-        for max in zip(q1, q2, q3, q4):
+        qAll = [q1, q2, q3, q4]
+        return q1, q2,q3, q4, qAll
+    def quarterMaxMin(qAll):
+        for max in qAll:
                 qMax = max
-        for min in zip(q1, q2, q3, q4):
+        for min in qAll:
                 qMin = min
         quarterRange = qMax - qMin
         return quarterRange
-        #fourth and fifth step
     def quarterSwap(q1, q2, q3, q4, quarterRange):
             if sum(q1) or sum(q2) or sum(q3) or sum(q4) >= quarterRange:
                  for min in zip(q1, q2, q3, q4):
@@ -63,7 +64,7 @@ quarterGet(sessions, 3)
 quarter = Quarter
 quarter()
 quarter.quarterCreate()
-quarter.quarterMaxMin([fourSplit[0]], [fourSplit[1]], [fourSplit[2]], [fourSplit[3]])
+quarter.quarterMaxMin([qAll])
 quarter.quarterSwap()
 
 
