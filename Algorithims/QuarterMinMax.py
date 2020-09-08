@@ -32,13 +32,14 @@ def quarterGet(lst, n):
 class Quarter:
 
     def quarterCreate():
-        global qAll
         q1 = [fourSplit[0]]
         q2 = [fourSplit[1]]
         q3 = [fourSplit[2]]
         q4 = [fourSplit[3]]
-        qAll = [q1, q2, q3, q4]
-        return q1, q2,q3, q4, qAll
+       
+        return q1, q2, q3, q4
+
+       #Below here doesn't wor
     def quarterMaxMin(qAll):
         for max in qAll:
                 qMax = max
@@ -54,8 +55,8 @@ class Quarter:
                     print(r1)
                     rotationShuffle()
                     quarterGet(sessions, 3)
-            
-    def ____call____(self):
+#Below here is driver code
+def ____call____(self):
         self.quarterCreate()
         self.quarterMaxMin()
         self.quarterSwap()
