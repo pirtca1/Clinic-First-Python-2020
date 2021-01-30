@@ -1,0 +1,14 @@
+Python Init(<Echo(Boolean), > <Path(path), > <Use Python Version("String", > <Python System Path ({/usr/local/bin/python3)>;
+Python Is Connected;
+dt = Open( "$HalfFinalTest.py");
+results = Python Get( results );
+df = Python Get ( dt );
+Python Term();
+Show( qbx );
+df << New Data View;
+Wait( 5 );
+
+Close( df, nosave );
+Python Term();
+	results = "The right values"
+	
